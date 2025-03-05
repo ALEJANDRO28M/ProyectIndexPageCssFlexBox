@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion</title>
+    <style>
+         *,
+        *::after,
+        *::before{
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0; 
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #222;
+            color: white;
+            
+        }
+        .header-container{
+            font-size: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 20px;
+            
+        }
+        .header-container ul{
+            display: flex;
+            gap: 18px;
+            list-style: none;
+        }
+        main{
+           flex-grow: 1;
+           background-color: white; 
+           color: black;
+           background-image: url("anime-moon-landscape.jpg");
+           background-size: cover;
+           
+        }
+         .hero-image{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;   
+            align-items: center;
+            height: 60vh;
+           
+            
+        }
+        .hero-image h3{
+            font-size: 3vw;
+            color: black;
+            border-style: solid;
+            border-radius: 22px 15px;
+            border-color: blanchedalmond;
+            background-color: blanchedalmond;
+            text-decoration: underline;
+            text-shadow: 3px 4px 8px;
+        }
+        .footerCss{
+            padding: 18px
+        }
+        img{
+            max-width:100%;
+            height: auto;
+            border-radius: 50PX;
+        }
+ /* Para el header */
+@media screen and (max-width: 750px) {
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header-container ul {
+        flex-direction: column;
+    }
+}
+
+/* Para los contenedores flexibles */
+.flex-container {
+    display: flex;
+    flex-direction: row; /* Por defecto en fila */
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+ .flex-order{
+    flex-direction: row-reverse;
+ }
+
+@media screen and (max-width: 750px) {
+    .flex-container {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+    img {
+        max-width: 100%; /* Para que las imágenes se ajusten bien */
+        height: auto;
+    }
+
+}
+
+@media screen and (min-width: 750px) {
+
+    img {
+        max-width: 85vh; /* Para que las imágenes se ajusten bien */
+        height: auto;
+    }
+
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header class="header-container">
+      <div>Logo</div>
+      <nav class="menu">
+        <ul>
+            <li><a href="#">Seleccion 1</a></li>
+            <li><a href="#">Seleccion 2</a></li>
+            <li><a href="#">Seleccion 3</a></li>
+            <li><a href="#">Seleccion 4</a></li>
+        </ul>
+    </nav>
+    </header>
+    <main>
+      <article class="hero-image">
+        <h3>Cada conocimiento y linea de codigo te acerca a ser mejor que ayer COOL!</h3>
+    </article>
+    <section class="flex-container">
+       <article class="flex-item">
+        <h2>Titulo</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eaque distinctio maiores repudiandae, dicta repellat explicabo, dolores,
+             nobis obcaecati et dolore rem. Quos non ipsum possimus
+              in! Nisi, esse culpa.</p>
+       </article>
+       <article class="flex-item">
+        <img src="fotoUno.jpg">
+       </article>
+    </section>
+    <section class="flex-container flex-order">
+        <article>
+         <h2>Titulo</h2>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor eaque distinctio maiores repudiandae, dicta repellat explicabo, dolores,
+              nobis obcaecati et dolore rem. Quos non ipsum possimus
+               in! Nisi, esse culpa.</p>
+        </article>
+        <article class="flex-item">
+        <img src="fotoDos.jpg">
+        </article>
+     </section>
+    </main>
+    <footer class="footerCss">
+       <h2>Sticky Footer</h2>
+    </footer>
+</body>
+</html>
